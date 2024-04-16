@@ -2,5 +2,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
     cards: [],
-    isLoading: true
+    archetype: [],
+    isLoading: true,
+    searchQuery : 'Cerca un archetipo',
 });
