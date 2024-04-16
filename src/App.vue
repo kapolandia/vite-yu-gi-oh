@@ -34,10 +34,10 @@
         })
         .then((response) => {
           store.cards = [];
+          store.count = 0;
           store.cards = response.data;
-          store.isLoading = false;
-          // console.log(store.cards.data[0].card_images[0].image_url);
-          console.log(store.cards.data);
+          store.count = store.cards.data.length;
+          console.log(response.data);
         });
       }
     },

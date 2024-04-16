@@ -19,7 +19,6 @@
                 .then((response) => {
                     store.archetype = response.data;
 
-                    console.log(store.archetype);
                 });
             },
         },
@@ -33,7 +32,6 @@
 
 <template>
     <select class="container form-select form-select-sm" aria-label="Small select example" v-model="searchQuery" @change="emitSelectedValue">
-        <option value="alien">Alien</option>
         <option v-for="option in store.archetype" :value=" option.archetype_name "> {{ option.archetype_name }}</option>
     </select>
 </template>
